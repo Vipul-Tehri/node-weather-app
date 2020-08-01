@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
       callback("Can not log weather details", undefined);
       // console.log("Can not log weather details");
     } else {
-      callback(undefined, `${body.current.weather_descriptions[0]}.It is currently ${body.current.temperature} degree out. There is ${body.current.precip}% chance of rain`);
+      callback(undefined, `${body.current.weather_descriptions[0]}.It is currently ${body.current.temperature} degree out. But It feels like ${body.current.feelslike}. There is ${body.current.precip}% chance of rain`);
     }
   });
 };
